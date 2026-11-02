@@ -1,0 +1,47 @@
+{
+  "settings": {
+    "chrome_path": "C:/Program Files/Google/Chrome/Application/chrome.exe"
+  },
+  "work mode": {
+    "aliases": [
+      "work",
+      "college mode",
+      "student mode"
+    ],
+    "actions": [
+      {
+        "type": "url",
+        "value": "https://claude.ai"
+      },
+      {
+        "type": "app",
+        "value": "antigravity",
+        "path": "D:/Program Files/Antigravity IDE",
+        "args": [
+          "C:/Users/Amritansh/OneDrive/Desktop/ST Project"
+        ]
+      },
+      {
+        "type": "app",
+        "value": "vscode",
+        "args": [
+          "C:/Users/Amritansh/OneDrive/Desktop/ST Project"
+        ]
+      },
+      {
+        "type": "app",
+        "value": "chatgpt",
+        "appid": "OpenAI.ChatGPT-Desktop_2p2nqsd0c76g0!ChatGPT"
+      },
+      {
+        "type": "folder",
+        "value": "C:/Users/Amritansh/OneDrive/Desktop/ST Project"
+      },
+      {
+        "type": "app",
+        "value": "whatsapp",
+        "appid": "5319275A.51895FA4EA97F_cv1g1gvanyjgm!App"
+      }
+    ]
+  }
+}

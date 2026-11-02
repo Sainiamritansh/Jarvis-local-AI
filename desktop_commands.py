@@ -1,6 +1,6 @@
 import pyautogui
 import time
-import re
+import subprocess
 from pywinauto import Desktop
 
 def _focus_whatsapp():
@@ -27,21 +27,10 @@ def open_whatsapp(text=""):
     time.sleep(4)  # give the app time to fully load
     return "Opening WhatsApp"
 
-def send_whatsapp_message(text):
-    """
-    Expects phrasing like: 'message sweety to wake up at 5am tomorrow'
-    Handles speech-to-text quirks where 'to' may be transcribed as '2' or 'too',
-    or the user naturally says 'that' instead.
-    """
-    try:
-        after_message = text.split("message", 1)[1].strip()
-        # Split on the first occurrence of to / 2 / too / that (as a whole word)
-        parts = re.split(r'\s+(?:to|2|too|that)\s+', after_message, maxsplit=1)
-        if len(parts) != 2:
-            return "Couldn't understand that. Try: message [name] to [your text]"
-        contact, message = parts[0].strip(), parts[1].strip()
-    except IndexError:
-        return "Couldn't understand that. Try: message [name] to [your text]"
+def send_whatsapp_message_to(contact, message):
+    """Search for a WhatsApp contact and send them a message."""
+    if not contact or not message:
+        return "Please provide both a contact and a message."
 
     if not _focus_whatsapp():
         open_whatsapp()
@@ -61,3 +50,25 @@ def send_whatsapp_message(text):
     pyautogui.press('enter')          # send
 
     return f"Message sent to {contact}"
+
+
+def launch_whatsapp(text=""):
+    """Launch WhatsApp Desktop through its registered Windows protocol."""
+    try:
+        subprocess.Popen(["cmd", "/c", "start", "", "whatsapp:"], shell=False)
+        return "Opening WhatsApp"
+    except OSError as error:
+        return f"Couldn't launch WhatsApp: {error}"
+
+
+def open_app(app_path):
+    """Launch a desktop application from its executable path."""
+    app_path = app_path.strip().strip('"')
+    if not app_path:
+        return "Please provide an application path."
+
+    try:
+        subprocess.Popen([app_path], shell=False)
+        return f"Opening {app_path}"
+    except OSError as error:
+        return f"Couldn't open {app_path}: {error}"

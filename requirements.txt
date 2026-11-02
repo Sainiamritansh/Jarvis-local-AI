@@ -4,11 +4,8 @@ pyttsx3
 pyaudio
 keyboard
 webdriver-manager
-selenium
-speechrecognition
-pyttsx3
-pyaudio
-keyboard
-webdriver-manager
 pyautogui
 pywinauto
+openwakeword
+onnxruntime
+numpy
