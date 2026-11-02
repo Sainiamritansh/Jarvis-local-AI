@@ -1,0 +1,44 @@
+YouTube
+
+Say	What it does
+“search <topic> [on youtube]”	Searches YouTube and remembers the results
+“play a video” / “play any video”	Plays a result from your last search. With no search, it plays the first video on the YouTube home page.
+“play the first / second / third video”	Plays that result (also “number 2”, “2nd”)
+“play <title>”	Plays the best-matching result, or searches for it and plays the first one
+“pause the video”	Pauses
+“resume the video”	Resumes
+“stop the video”	Stops and rewinds. The assistant keeps running.
+
+Open apps
+
+Say	What it does
+“open app Microsoft Edge” / “open Edge”	Opens Edge
+“open Chrome”	Opens Google Chrome
+“open File Explorer” / “launch File Explorer”	Opens File Explorer
+“open Notepad”	Opens Notepad
+“open Calculator”	Opens Calculator
+“open Settings”	Opens Windows Settings
+“open Task Manager”	Opens Task Manager
+“open Command Prompt”	Opens Command Prompt
+“open VS Code”	Opens Visual Studio Code
+“open app <path to .exe>”	Launches that program
+
+Websites and browser
+
+Say	What it does
+“open google” / “open youtube”	Opens the site
+“open <site>”	Opens www.<site>.com
+“scroll down” / “scroll up”	Scrolls the page
+“take a screenshot”	Saves a screenshot in the project folder
+“close browser”	Closes the Selenium Chrome window
+
+WhatsApp
+
+Say	What it does
+“open whatsapp” / “launch whatsapp”	Opens WhatsApp Desktop
+“message <contact> saying <text>”	Sends a message
+
+Exit
+
+Say	What it does
+“stop”, “exit”, “quit”, “shutdown”, “goodbye”	Shuts the assistant down. It only works as a whole phrase now, so “stop the video” no longer shuts it down.
